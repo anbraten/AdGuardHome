@@ -9,7 +9,6 @@ import { renderRadioField, renderTextareaField, CheckboxField } from '../../../.
 import {
     DNS_REQUEST_OPTIONS,
     FORM_NAME,
-    isFirefox,
     UPSTREAM_CONFIGURATION_WIKI_LINK,
 } from '../../../../helpers/constants';
 import { testUpstreamWithFormValues } from '../../../../actions';

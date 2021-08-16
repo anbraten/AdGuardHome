@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Trans, withTranslation } from 'react-i18next';
-import classnames from 'classnames';
 import Card from '../ui/Card';
 import PageTitle from '../ui/PageTitle';
 import Examples from './Examples';
 import Check from './Check';
 import { getTextareaCommentsHighlight, syncScroll } from '../../helpers/highlightTextareaComments';
-import { COMMENT_LINE_DEFAULT_TOKEN, isFirefox } from '../../helpers/constants';
+import { COMMENT_LINE_DEFAULT_TOKEN } from '../../helpers/constants';
 import '../ui/texareaCommentsHighlight.css';
 
 class CustomRules extends Component {
