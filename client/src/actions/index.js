@@ -638,7 +638,7 @@ export const toggleBlocking = (
 };
 
 export const toggleBlockingForClient = (type, domain, client) => {
-    const baseRule = `||${domain}^$client='${client.replace(/'/g, '/\'')}'`;
+    const baseRule = `||${domain}^$client='${client.replace(/'/g, '\\\'')}'`;
     const baseUnblocking = `@@${baseRule}`;
 
     return toggleBlocking(type, domain, baseRule, baseUnblocking);
