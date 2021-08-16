@@ -52,26 +52,19 @@ class CustomRules extends Component {
         return (
             <>
                 <PageTitle title={t('custom_filtering_rules')} />
-                <Card
-                    subtitle={t('custom_filter_rules_hint')}
-                >
+                <Card subtitle={t('custom_filter_rules_hint')}>
                     <form onSubmit={this.handleSubmit}>
-                        <div className={classnames('col-12 text-edit-container form-control--textarea-large', {
-                            'mb-4': !isFirefox,
-                            'mb-6': isFirefox,
-                        })}>
-                        <textarea
-                                className={classnames('form-control font-monospace text-input form-control--textarea-large', {
-                                    'text-input--largest': isFirefox,
-                                })}
+                        <div className="text-edit-container mb-4">
+                            <textarea
+                                className="form-control font-monospace text-input"
                                 value={userRules}
                                 onChange={this.handleChange}
                                 onScroll={this.onScroll}
-                        />
+                            />
                             {getTextareaCommentsHighlight(
                                 this.ref,
                                 userRules,
-                                classnames({ 'form-control--textarea-large': isFirefox }),
+                                undefined,
                                 [COMMENT_LINE_DEFAULT_TOKEN, '!'],
                             )}
                         </div>
